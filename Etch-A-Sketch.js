@@ -1,27 +1,10 @@
 const container = document.querySelector('div');
-const box = document.createElement('span');
-container.appendChild(box);
 
-for(let i = 0; i < 16; i++) {
-    const rsquares = document.createElement('div');
-    //rsquares.textContent = 'div';
-    rsquares.style.cssText = 'background-color: white';
+let num = 16;
 
-    rsquares.addEventListener('mouseover', () => {
-        rsquares.style.cssText = 'background-color: black';
-    });
-
-    for(let j = 0; j < 15; j++) {
-        const csquares = document.createElement('div');
-        //csquares.textContent = 'div';
-        csquares.style.cssText = 'background-color: white';
-
-        csquares.addEventListener('mouseover', () => {
-            csquares.style.cssText = 'background-color: black';
-        });
-
-        rsquares.appendChild(csquares);
-    };
-    container.appendChild(rsquares);
+for(i = 0; i < num; i++) {
+    const box = document.createElement('div');
+    box.style.cssText = "width: 100px; height: 100px; background-color: blue;";
+    box.textContent = 'div';
+    container.appendChild(box);
 };
-

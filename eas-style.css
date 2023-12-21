@@ -1,11 +1,6 @@
-div div {
-    height: 15px;
-    width: 300px;
+.container {
     display: flex;
-    flex-direction: row;
-};
-
-div div div {
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 };
