@@ -1,14 +1,41 @@
-const container = document.querySelector('div');
+let court = document.querySelector('div');
 
-let num = 16;
+const grid = function (scale) {
 
-for(i = 0; i < num; i++) {
-    const box = document.createElement('div');
-    box.style.cssText = "width: 100px; height: 100px; background-color: blue;";
-    box.textContent = 'div';
+    for(let i = 0; i < scale; i++) {
+        const gsqr = document.createElement('div');
+        gsqr.className = 'grid-item'
 
-    box.addEventListener('mouseover', () => {
-        box.style.cssText = "width: 100px; height: 100px; background-color: red;";
-    });
-    container.appendChild(box);
+        gsqr.addEventListener('mouseover', () => {
+            gsqr.style.cssText = 'background-color: white'
+        });
+
+        for(let j = 0; j < scale-1; j++) {
+            const gsqr2 = document.createElement('div');
+            gsqr2.className ='grid-bro';
+
+            gsqr2.addEventListener('mouseover', () => {
+                gsqr2.style.cssText = 'background-color: white'
+            });
+
+            gsqr.appendChild(gsqr2);
+        };
+        court.appendChild(gsqr);
+    };
 };
+
+grid(16);
+
+const reset = document.querySelector('button');
+
+reset.addEventListener('click', () => {
+    while(court.firstChild) {
+        court.removeChild(court.firstChild);
+    };
+
+    let input = window.prompt();
+    let num = parseInt(input);
+
+    grid(num);
+
+});

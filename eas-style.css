@@ -1,8 +1,35 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    overflow: hidden;
     width: 400px;
     height: 400px;
-};
+}
+
+/*.grid-item {
+    display: flex; 
+    width: 10px; 
+    height: 10px;
+    background-color: black;
+}
+
+.grid-bro {
+    display: flex; 
+    width: 10px; 
+    height: 10px;
+    background-color: black;
+}*/
+
+.grid-item {
+    display: flex; 
+    width: 33.33%; 
+    height: 33.33%;
+    background-color: black;
+}
+
+.grid-bro {
+    display: flex; 
+    width: 33.33%; 
+    height: 33.33%;
+    background-color: black;
+}
